@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmeco - Home</title>
+    <link rel="stylesheet" href="path/to/your/styles.css">
+    <script src="path/to/your/script.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>Welcome to Filmeco</h1>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2 th:text="${titulo}">Featured Movies</h2>
+        <div id="featured-movies">
+            <h3>Nome: </h3>
+            <input type="text" th:value="${nome}">
+            <!-- Dynamic content will be populated here -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Latest Releases</h2>
+        <div id="latest-releases">
+            <!-- Dynamic content will be populated here -->
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Filmeco. All rights reserved.</p>
+</footer>
+</body>
+</html>
