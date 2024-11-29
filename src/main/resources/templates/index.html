@@ -4,41 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmeco - Home</title>
-    <link rel="stylesheet" href="path/to/your/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="path/to/your/script.js" defer></script>
 </head>
 <body>
-<header>
-    <h1>Welcome to Filmeco</h1>
-    <nav>
-        <ul>
-            <li><a href="/home">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+<div class="main-container">
 
-<main>
-    <section>
-        <h2 th:text="${titulo}">Featured Movies</h2>
-        <div id="featured-movies">
-            <h3>Nome: </h3>
-            <input type="text" th:value="${nome}">
-            <!-- Dynamic content will be populated here -->
+    <!-- SideMenu -->
+    <div class="sidebar">
+        <a href="#" class="menu-item">
+            <img src="/images/Home.png" alt="Home" class="menu-icon">
+            Home
+        </a>
+        <a href="#" class="menu-item">
+            <img src="/images/explorar.png" alt="Explorar" class="menu-icon">
+            Explorar
+        </a>
+        <a href="#" class="menu-item">
+            <img src="/images/fav.png" alt="Favoritos" class="menu-icon">
+            Favoritos
+        </a>
+        <a href="#" class="menu-item">
+            <img src="/images/configuracao.png" alt="Configurações" class="menu-icon">
+            Configurações
+        </a>
+        <div class="keep-watching">
+            <hr>
+            <p class="text">Continuar assistindo</p>
         </div>
-    </section>
+    </div>
 
-    <section>
-        <h2>Latest Releases</h2>
-        <div id="latest-releases">
-            <!-- Dynamic content will be populated here -->
+    <!-- NavBar -->
+    <header class="navbar">
+        <div class="navbar-left"></div>
+
+        <div class="navbar-search">
+            <input type="text" placeholder="Pesquisar">
+            <button class="search-button">
+                <img src="/images/search.png" alt="Search">
+            </button>
         </div>
-    </section>
-</main>
 
-<footer>
-    <p>&copy; 2024 Filmeco. All rights reserved.</p>
-</footer>
+        <div class="navbar-right">
+            <a href="#" class="profile-icon" aria-label="Perfil">
+                <img src="/images/profile.png" alt="Profile" class="profile-img">
+            </a>
+            <a href="#" class="profile-text login-link">Login</a>
+            <span class="divider">/</span>
+            <a href="#" class="profile-text register-link">Inscrever-se</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div>Conteudo do site</div>
+    </main>
+</div>
 </body>
 </html>
