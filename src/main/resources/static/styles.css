@@ -1,0 +1,143 @@
+
+* {
+    margin: 10px 20px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background-color: #e0dede;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 10px;
+    left: 240px;
+    width: calc(100% - 240px);
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    z-index: 1000;
+}
+
+.navbar-search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.navbar-search input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 50px;
+    background-color: #232323;
+    color: #fff;
+    outline: none;
+}
+
+.navbar-search .search-button {
+    margin-left: -75px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    background-color: #232323;
+    border-radius: 50px;
+    height: 42px;
+}
+
+
+.profile-icon {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    background-color: #e8003e;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: 1px;
+}
+
+.profile-icon .profile-img {
+    width: 55%;
+}
+
+
+.profile-text {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.profile-text:hover {
+    color: #e8003e;
+}
+
+.divider {
+    color: #fff;
+    font-size: 14px;
+}
+
+
+.sidebar {
+    position: fixed;
+    top: 20px;
+    width: 240px;
+    height: 90%;
+    background-color: #232323;
+    border-radius: 40px;
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sidebar .menu-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.sidebar .menu-item:hover{
+    color: #e8003e;
+}
+
+.sidebar .menu-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+
+.keep-watching .text{
+    padding-top: 20px;
+    color: white;
+    font-size: 15px;
+}
+
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+    margin-top: 60px;
+}
