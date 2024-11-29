@@ -8,19 +8,18 @@
 body {
     font-family: Arial, sans-serif;
     min-height: 100vh;
-    background-color: #e0dede;
+    background-color: #16141a;
 }
 
 
 .navbar {
     position: fixed;
     top: 10px;
-    left: 240px;
+    left: 210px;
     width: calc(100% - 240px);
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     padding: 0 50px;
     z-index: 1000;
 }
@@ -34,7 +33,7 @@ body {
 }
 
 .navbar-search input {
-    width: 100%;
+    width: 91%;
     padding: 12px 15px;
     border: none;
     border-radius: 50px;
@@ -140,4 +139,22 @@ body {
     margin-left: 240px;
     padding: 20px;
     margin-top: 60px;
+}
+
+.bn-home{
+    width: 100%;
+    margin-left: 47px;
+}
+
+.text-carrosel{
+    color: white;
+    margin-left: 47px;
+}
+
+.bn-movie{
+    width: 18%;
+}
+
+.recentes{
+    margin-top: 50px;
 }
