@@ -1,4 +1,4 @@
-![logohotel]()
+![logoFilmeco]()
 
 # Filmeco - Projeto final POO
 O Filmeco oferece uma ampla seleção de filmes e séries de diversos gêneros, permitindo aos usuários assistir a conteúdo de alta qualidade de forma fácil e rápida. Com uma interface intuitiva, o site disponibiliza opções de streaming, com detalhes sobre cada título e e elenco, além de filtros que ajudam a encontrar produções conforme preferências pessoais. Regularmente atualizado, o site garante acesso a lançamentos recentes e clássicos do cinema, proporcionando uma experiência de entretenimento completa para os amantes da sétima arte.
