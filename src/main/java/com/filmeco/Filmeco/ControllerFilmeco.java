@@ -31,11 +31,18 @@ public class ControllerFilmeco {
                        if (rs.next()) {
                            System.out.println("Título: " + rs.getString("titulo"));
                        }
-                     mv.addObject("nome", rs.getString("genero"));
+                     mv.addObject("nome", rs.getString("duracao"));
                     mv.addObject("titulo", rs.getString("titulo"));
         } catch (Exception e) {
                        throw new RuntimeException(e);
                    }
+
+        return mv;
+    }
+
+    @GetMapping("/login")
+    public ModelAndView login(){
+        ModelAndView mv = new ModelAndView("login");
 
         return mv;
     }
