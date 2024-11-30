@@ -1,7 +1,12 @@
 package Model;
 
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import Model.JdbcConnection;
 
 public class Filme {
     private int id;
@@ -9,13 +14,14 @@ public class Filme {
     private int duracao;
     private String descricao;
     private int ano;
-    private LocalDateTime dataInsercao;
+    private Date dataInsercao;
     private ArrayList<String> generos;;
     private String filmeEndereco;
     private String capaEndereco;
 
+
     public Filme(int id, String titulo, int duracao, String descricao,
-                 int ano, LocalDateTime dataInsercao, ArrayList<String> generos,
+                 int ano, Date dataInsercao,
                  String filmeEndereco, String capaEndereco) {
         this.id = id;
         this.titulo = titulo;
@@ -23,7 +29,6 @@ public class Filme {
         this.descricao = descricao;
         this.ano = ano;
         this.dataInsercao = dataInsercao;
-        this.generos = generos;
         this.filmeEndereco = filmeEndereco;
         this.capaEndereco = capaEndereco;
     }
@@ -68,11 +73,11 @@ public class Filme {
         this.ano = ano;
     }
 
-    public LocalDateTime getDataInsercao() {
+    public Date getDataInsercao() {
         return dataInsercao;
     }
 
-    public void setDataInsercao(LocalDateTime dataInsercao) {
+    public void setDataInsercao(Date dataInsercao) {
         this.dataInsercao = dataInsercao;
     }
 
@@ -99,6 +104,5 @@ public class Filme {
     public void setCapaEndereco(String capaEndereco) {
         this.capaEndereco = capaEndereco;
     }
-
 
 }
