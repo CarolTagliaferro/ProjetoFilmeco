@@ -220,7 +220,8 @@ body {
 
 .form-container {
     flex: 1;
-    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: #22202e;
     color: white;
     border-radius: 20px;
