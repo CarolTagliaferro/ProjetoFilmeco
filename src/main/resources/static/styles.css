@@ -14,7 +14,7 @@ body {
 .navbar {
     position: fixed;
     top: 10px;
-    left: 210px;
+    left: 220px;
     width: calc(100% - 240px);
     height: 60px;
     display: flex;
@@ -42,7 +42,7 @@ body {
 }
 
 .navbar-search .search-button {
-    margin-left: -75px;
+    margin-left: -95px;
     background: none;
     border: none;
     color: #fff;
@@ -248,7 +248,7 @@ form {
 }
 
 input, button {
-    padding: 20px;
+    padding: 18px;
     font-size: 14px;
     border: none;
     border-radius: 8px;
@@ -274,4 +274,30 @@ button:hover {
 
 .hidden {
     display: none;
+}
+
+.text-bn {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    bottom: 40px;
+    margin-left: 50px;
+}
+
+.titulo,
+.subtitulo {
+    color: #462FA1;
+}
+
+.subtitulo {
+    font-weight: 100;
+    text-align: start;
+    font-size: 20px;
+}
+
+.titulo {
+    margin-right: 150px;
+    font-weight: lighter;
+    font-size: 30px;
+    text-align: end;
 }
