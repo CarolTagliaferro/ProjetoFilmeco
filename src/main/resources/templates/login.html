@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div class="main-container">
+    <div class="container">
+        <div class="login-bn">
+            <button class="backhome-bt" id="backhome-btn">
+                <img src="/images/arrow.png" alt="Seta" class="arrow">
+                <img src="/images/back-home.png" alt="Ícone home" class="home">
+            </button>
+            <img src="/images/login.png" alt="Banner de Login" class="img-login">
+        </div>
+
+
+        <div class="form-container">
+            <div id="login-form" class="form">
+                <h2>Log in</h2>
+                <form>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Log in</button>
+                </form>
+                <p>Don't have an account? <a href="#" id="switch-to-signup" style="color: #5a4ffd;">Sign up</a></p>
+            </div>
+
+            <div id="signup-form" class="form hidden">
+                <h2>Create an account</h2>
+                <form>
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Create account</button>
+                </form>
+                <p>Already have an account? <a href="#" id="switch-to-login" style="color: #5a4ffd;">Log in</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
