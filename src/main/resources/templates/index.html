@@ -16,7 +16,7 @@
             <img src="/images/Home.png" alt="Home" class="menu-icon">
             Home
         </a>
-        <a href="#" class="menu-item">
+        <a href="explorar.html" class="menu-item">
             <img src="/images/explorar.png" alt="Explorar" class="menu-icon">
             Explorar
         </a>
@@ -49,39 +49,131 @@
             <a href="#" class="profile-icon" aria-label="Perfil">
                 <img src="/images/profile.png" alt="Profile" class="profile-img">
             </a>
-            <a href="#" class="profile-text login-link">Login</a>
+            <a href="login.html" class="profile-text login-link">Login</a>
             <span class="divider">/</span>
             <a href="#" class="profile-text register-link">Inscrever-se</a>
         </div>
     </header>
 
+    <!-- Conteudo -->
     <main class="main-content">
         <div>
             <img src="/images/bn-home.png" alt="Banner" class="bn-home">
         </div>
 
-        <div class="recentes">
+        <div class="carrossel-container">
             <h1 class="text-carrosel">Os mais recentes</h1>
-            <div>
-                <img src="/images/poster.png" alt="Banner filme" class="bn-movie">
-                <img src="/images/poster-2.png" alt="Banner filme" class="bn-movie">
-            </div>
-        </div>
-        <div class="recentes">
-            <h1 class="text-carrosel">Comédia</h1>
-            <div>
-                <img src="/images/poster.png" alt="Banner filme" class="bn-movie">
-                <img src="/images/poster-2.png" alt="Banner filme" class="bn-movie">
-            </div>
-        </div>
-        <div class="recentes">
-            <h1 class="text-carrosel">Drama</h1>
-            <div>
-                <img src="/images/poster.png" alt="Banner filme" class="bn-movie">
-                <img src="/images/poster-2.png" alt="Banner filme" class="bn-movie">
+            <div class="carrossel">
+                <button class="left-arrow">
+                    <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 2L3.70711 9.29289C3.31658 9.68342 3.31658 10.3166 3.70711 10.7071L11 18" stroke="#ffff" stroke-width="5"/>
+                    </svg>
+                </button>
+                <div class="carrossel-box">
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster-2.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster-2.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster-2.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster-2.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                    <div>
+                        <img src="/images/poster.png" alt="Banner filme" class="">
+                    </div>
+                </div>
+                <button class="right-arrow">
+                    <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 18L9.29289 10.7071C9.68342 10.3166 9.68342 9.68342 9.29289 9.29289L2 2" stroke="#ffff" stroke-width="5"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </main>
 </div>
+<!-- Não é a melhor forma mas o script pelo script.js não esta funcionando na minha maquina -->
+<script>
+    <!-- Carrossel -->
+    const carrosselBox = document.querySelector('.carrossel-box');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+
+    let currentIndex = 0; // Indice inicial
+    const card = document.querySelectorAll('.carrossel-box div');
+    const qntCards = 5; // Numero de cards que eu desejo
+    const cardWidth = carrosselBox.offsetWidth / qntCards; // calculo da largura de cada item
+
+    function updateCarrossel() {
+        const translateX = -currentIndex * cardWidth; // função que vai mover meus cards baseado no index atual
+        carrosselBox.style.transform = `translateX(${translateX}px)`;
+    }
+
+
+    rightArrow.addEventListener('click', () => {
+        if (currentIndex < card.length - qntCards) { //movendo para a direita adicionando 5 ao index atual e movendo utilizando a função updatecarrossel
+            currentIndex=currentIndex + 5;
+            updateCarrossel();
+        }
+    });
+
+    // Listener para o botão da esquerda
+    leftArrow.addEventListener('click', () => { //movendo para esquerda subtraindo 5 do index atual
+        if (currentIndex > 0) {
+            currentIndex=currentIndex - 5;
+            updateCarrossel();
+        }
+    });
+
+</script>
+
 </body>
 </html>

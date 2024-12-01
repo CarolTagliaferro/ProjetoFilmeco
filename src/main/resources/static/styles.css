@@ -75,7 +75,6 @@ body {
     width: 55%;
 }
 
-
 .profile-text {
     color: #fff;
     font-size: 14px;
@@ -143,6 +142,7 @@ body {
 .bn-home{
     width: 100%;
     margin-left: 47px;
+    border-radius: 25px;
 }
 
 .text-carrosel{
@@ -150,13 +150,6 @@ body {
     margin-left: 47px;
 }
 
-.bn-movie{
-    width: 18%;
-}
-
-.recentes{
-    margin-top: 50px;
-}
 
 /* Login */
 
@@ -274,30 +267,4 @@ button:hover {
 
 .hidden {
     display: none;
-}
-
-.text-bn {
-    display: flex;
-    position: absolute;
-    z-index: 1;
-    bottom: 40px;
-    margin-left: 50px;
-}
-
-.titulo,
-.subtitulo {
-    color: #462FA1;
-}
-
-.subtitulo {
-    font-weight: 100;
-    text-align: start;
-    font-size: 20px;
-}
-
-.titulo {
-    margin-right: 150px;
-    font-weight: lighter;
-    font-size: 30px;
-    text-align: end;
 }
