@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import Model.JdbcConnection;
 
 public class Filme {
+    public ArrayList<Filme> filmes = new ArrayList<>();
+
     private int id;
     private String titulo;
     private int duracao;
@@ -19,6 +21,9 @@ public class Filme {
     private String filmeEndereco;
     private String capaEndereco;
 
+    public Filme() {
+
+    }
 
     public Filme(int id, String titulo, int duracao, String descricao,
                  int ano, Date dataInsercao,
@@ -103,6 +108,45 @@ public class Filme {
 
     public void setCapaEndereco(String capaEndereco) {
         this.capaEndereco = capaEndereco;
+    }
+
+    public ArrayList<Filme> puxarBanco(){
+        Model.JdbcConnection jdbc = new Model.JdbcConnection();
+        Connection conn = jdbc.getConnection();
+        String query = "SELECT * FROM filmes";
+
+
+        try (PreparedStatement stmt = conn.prepareStatement(query)) {
+            // Define o valor do parâmetro
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Filme filme = new Filme(rs.getInt("id"), rs.getString("titulo"),
+                        rs.getInt("duracao"), rs.getString("descricao"),
+                        rs.getInt("ano"),rs.getDate("data"),rs.getString("filme"),
+                        rs.getString("capa"));
+                filmes.add(filme);
+                String query2 = "SELECT genero from genero\n" +
+                        "INNER JOIN filme_genero ON filme_genero.genero_id = genero.id\n" +
+                        "where filme_genero.filme_id = "+ rs.getInt("id");
+                try (PreparedStatement stmt2 = conn.prepareStatement(query2)) {
+                    ResultSet rs2 = stmt2.executeQuery();
+                    ArrayList<String> generos = new ArrayList<>();
+                    while (rs2.next()) {
+                        generos.add(rs2.getString("genero"));
+                    }
+                    filmes.getLast().setGeneros(generos);
+                    System.out.println(filmes.getLast().getTitulo());
+                    System.out.println(filmes.getLast().getGeneros());
+
+                } catch (RuntimeException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return filmes;
     }
 
 }

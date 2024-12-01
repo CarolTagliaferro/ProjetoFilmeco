@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filmeco - Explorar</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="../static/script.js" defer></script>
 </head>
 <body>
 <div class="main-container">
 
     <!-- SideMenu -->
     <div class="sidebar">
-        <a href="index.html" class="menu-item">
+        <a href="/home" class="menu-item">
             <img src="/images/Home.png" alt="Home" class="menu-icon">
             Home
         </a>
-        <a href="explorar.html" class="menu-item">
+        <a href="/explorar" class="menu-item">
             <img src="/images/explorar.png" alt="Explorar" class="menu-icon">
             Explorar
         </a>
@@ -58,7 +57,7 @@
     <!-- Conteudo -->
     <main class="main-content">
         <div class="filmpage">
-            <h2 class="titlefilme">Título</h2>
+            <h2 th:text="${titulo}" class="titlefilme">Título</h2>
             <div class="catfilmpage">
                 <span>Categoria 1</span>
                 <span>Categoria 2</span>
@@ -69,10 +68,10 @@
                     <path d="M0 29.0215C0.0789933 32.0941 3.62501 33.9546 6.73191 32.4919L31.716 19.9094C33.0767 19.2231 34 17.9658 34 16.4923C34 15.0189 33.0767 13.7615 31.716 13.0753L6.73191 0.510697C3.62501 -0.952075 0.078812 0.890694 0 3.96338V29.0215Z" fill="white"/>
                 </svg>
                 </button>
-                <span>Duração: 120min</span>
-                <span>Ano: 2024</span>
+                <span th:text="${duracao}">Duração: 120min</span>
+                <span th:text="${ano}">Ano: 2024</span>
             </div>
-            <p class="descfilmpage">
+            <p th:text="${descricao}" class="descfilmpage">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada augue at convallis pellentesque.
                 Etiam vulputate congue arcu, a maximus purus auctor in. Maecenas in fermentum risus. Donec non interdum turpis.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada augue at convallis pellentesque.
@@ -86,6 +85,6 @@
     </main>
 </div>
 
-
+<script src="script.js" defer></script>
 </body>
 </html>
