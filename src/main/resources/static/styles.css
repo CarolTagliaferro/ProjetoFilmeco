@@ -150,13 +150,6 @@ body {
     margin-left: 47px;
 }
 
-.bn-movie{
-    width: 18%;
-}
-
-.recentes{
-    margin-top: 50px;
-}
 
 /* Login */
 
@@ -301,3 +294,90 @@ button:hover {
     font-size: 30px;
     text-align: end;
 }
+
+.carrossel{
+    margin-left: 0%;
+    padding: 0px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.carrossel-box{ /* inicialmente ela não existiria, mas foi necessaria para fazer o carrossel */
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    height: fit-content;
+    display: flex;
+    transition: transform 1s ease-in-out;
+
+;
+}
+.carrossel-box div{     /* Card filme Carrossel */
+    flex: 0 0 17.59%;
+    height: fit-content;
+    margin: 30px 0px 30px 2.40%;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),  opacity .2s ;
+}
+
+.carrossel-box div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+}
+
+.carrossel-box div img{
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+
+}
+
+.carrossel-container{
+    margin: 50px  0px  0px 30px;
+    width: 100%;
+}
+
+.carrossel button{  /* botão direita e esquerda */
+    color: rgba(95, 158, 160, 0);
+    background-color: rgba(90, 79, 253, 0);
+    height: 30px;
+    width: 30px;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    scale: 1.9;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carrossel button:hover{  /* botão direita e esquerda */
+    transform: scale(1.6);
+}
+
+.carrossel button svg{  /* tive que fazer para centralizar a seta(NADA FUNCIONAVA) */
+    margin: auto;
+    opacity: 0.6;
+
+}
+
+.left-arrow{
+    left: 3%;;
+}
+
+.right-arrow{
+    right: 1%
+}
+
