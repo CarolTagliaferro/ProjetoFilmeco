@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmeco - Explorar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="main-container">
+
+    <!-- SideMenu -->
+    <div class="sidebar">
+        <a href="/home" class="menu-item">
+            <img src="/images/Home.png" alt="Home" class="menu-icon">
+            Home
+        </a>
+        <a href="/explorar" class="menu-item">
+            <img src="/images/explorar.png" alt="Explorar" class="menu-icon">
+            Explorar
+        </a>
+        <a href="#" class="menu-item">
+            <img src="/images/fav.png" alt="Favoritos" class="menu-icon">
+            Favoritos
+        </a>
+        <a href="#" class="menu-item">
+            <img src="/images/configuracao.png" alt="Configurações" class="menu-icon">
+            Configurações
+        </a>
+        <div class="keep-watching">
+            <hr>
+            <p class="text">Continuar assistindo</p>
+        </div>
+    </div>
+
+    <!-- NavBar -->
+    <header class="navbar">
+        <div class="navbar-left"></div>
+
+        <div class="navbar-search">
+            <input type="text" placeholder="Pesquisar">
+            <button class="search-button">
+                <img src="/images/search.png" alt="Search">
+            </button>
+        </div>
+
+        <div class="navbar-right">
+            <a href="#" class="profile-icon" aria-label="Perfil">
+                <img src="/images/profile.png" alt="Profile" class="profile-img">
+            </a>
+            <a href="login.html" class="profile-text login-link">Login</a>
+            <span class="divider">/</span>
+            <a href="#" class="profile-text register-link">Inscrever-se</a>
+        </div>
+    </header>
+
+    <!-- Conteudo -->
+    <main class="main-content">
+         <div class="filmpage">
+            <img th:scr="${fundo}">
+            <h2 th:text="${titulo}" class="titlefilme">Título</h2>
+            <div class="catfilmpage">
+                <span>Categoria 1</span>
+                <span>Categoria 2</span>
+                <span>Categoria 3</span>
+            </div>
+            <div class="info">
+                <a th:href="${assistir}" class="play-button">
+                <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 29.0215C0.0789933 32.0941 3.62501 33.9546 6.73191 32.4919L31.716 19.9094C33.0767 19.2231 34 17.9658 34 16.4923C34 15.0189 33.0767 13.7615 31.716 13.0753L6.73191 0.510697C3.62501 -0.952075 0.078812 0.890694 0 3.96338V29.0215Z" fill="white"/>
+                </svg>
+                </a>
+                <span th:text="${duracao}">Duração: 120min</span>
+                <span th:text="${ano}">Ano: 2024</span>
+            </div>
+            <p th:text="${descricao}" class="descfilmpage">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada augue at convallis pellentesque.
+                Etiam vulputate congue arcu, a maximus purus auctor in. Maecenas in fermentum risus. Donec non interdum turpis.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada augue at convallis pellentesque.
+                Etiam vulputate congue arcu, a maximus purus auctor in. Maecenas in fermentum risus. Donec non interdum turpis.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada augue at convallis pellentesque.
+                Etiam vulputate congue arcu, a maximus purus auctor in. Maecenas in fermentum risus. Donec non interdum turpis.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In malesuada augue at convallis pellentesque.
+                Etiam vulputate congue arcu, a maximus purus auctor in. Maecenas in fermentum risus. Donec non interdum turpis.
+            </p>
+        </div>
+    </main>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
