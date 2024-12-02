@@ -4,38 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
 <div class="main-container">
     <div class="container">
-        <div class="login-bn">
+        <div class="signup-bn">
+            <img src="/images/signup.png" alt="Banner de Cadastro" class="img-signup">
+        </div>
+
+        <div class="form-container" style="position: relative;">
             <button class="backhome-bt" id="backhome-btn">
                 <img src="/images/arrow.png" alt="Seta" class="arrow">
                 <img src="/images/back-home.png" alt="Ícone home" class="home">
             </button>
-            <img src="/images/login.png" alt="Banner de Login" class="img-login">
-        </div>
-
-
-        <div class="form-container">
             <div class="form">
-                <h2>Login</h2>
+                <h2>Crie uma conta</h2>
                 <form>
                     <h3>E-mail:</h3>
                     <input type="email" placeholder="exemplo@email.com" required>
                     <h3>Senha:</h3>
                     <input type="password" placeholder="##########" required>
+                    <h3>Confirmar senha:</h3>
+                    <input type="password" placeholder="##########" required>
+                    <h3>Nome de usuário:</h3>
+                    <input type="text" placeholder="exemploNome" required>
                     <div class="btn-container">
-                        <button type="submit"><a href="/home" class="text-btn-login">entrar</a></button>
+                        <button type="submit"><a href="/login" class="text-btn-login">criar</a></button>
                     </div>
                 </form>
-                <p>Não é membro?</br><a href="/signup" class="signup-link">cadastre-se agora</a></p>
             </div>
         </div>
     </div>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>

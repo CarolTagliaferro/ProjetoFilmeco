@@ -43,6 +43,13 @@ public class ControllerFilmeco {
         return mv;
     }
 
+    @GetMapping("/signup")
+    public ModelAndView signup(){
+        ModelAndView mv = new ModelAndView("signup");
+
+        return mv;
+    }
+
     @GetMapping("/filmpage")
         public ModelAndView filmpage(){
         ModelAndView mv = new ModelAndView("filmepage");
