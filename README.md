@@ -5,10 +5,9 @@
  > 3. [Tecnologias](#Tecnologias)
  > 4. [Status do projeto](#Status-do-projeto)
  > 5. [Design](#Design)
- > 6. [Demonstração](#Demonstração)
- > 7. [Acesso ao projeto](#Acesso-ao-projeto)
- > 8. [Dificuldades](#Dificuldades)
- > 9. [Autores](#Autores)
+ > 6. [Acesso ao projeto](#Acesso-ao-projeto)
+ > 7. [Dificuldades](#Dificuldades)
+ > 8. [Autores](#Autores)
 
 
 # Filmeco :vhs:  - Projeto final Programação Orientada a Objetos (POO)  <a name="Filmeco"></a>
@@ -46,10 +45,18 @@ Nascido da nostalgia  locadoras de filmes, do barulho de internet discada e da e
 O design do projeto se baseia numa mistura da estética analógica dos anos de 1980 até 2000 com o minimalismo moderno, procurando trazer de volta a sensação descobrimento ao encontrar um filme novo e interessante
 no meio de uma grande biblioteca. Além disso criamos também um mascote do site para dar a sensação de companheirismo com o usuário, diferenciando-nos das grandes corporações que dominam o meio de streaming.
 🎨[Link do Figma do projeto](https://www.figma.com/design/Zby6c30kfou1ilKdp9E293/Filmeco?node-id=0-1&t=mlsa33K9yvtOPGI4-1)
-## Demonstração
 
 ## Acesso ao projeto
-
+1. Clonar o repositório,  
+2. Instalar o xampp,  
+3. Abrir o arquivo banco de dados e copiar o código filmeco no xampp,  
+4. Dar start em mySQL e Apache, depois selecionar admin em mysql para abrir no navegador    
+5. Na aba do navegador, selecionar a aba SQL inserir o seguinte código:    
+ >CREATE DATABASE filmeco;  
+ >USE filmeco;  
+6. Colar o código do banco de dados  
+7. Após isso basta rodar o projeto na IDE intelliJ  
+8. Para visualizar e interagir com o projeto basta abrir uma aba no navegador e inserir "http://localhost:8080/start"  
 ## Dificuldades
 A utilização de HTML & CSS puro, sem uso de frameworks, acabou atrasando o desenvolvimento do projeto.
 
