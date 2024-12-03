@@ -63,7 +63,7 @@ body {
     display: inline-flex;
     width: 38px;
     height: 38px;
-    background-color: #e8003e;
+    background-color: #d42500;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
@@ -83,7 +83,7 @@ body {
 }
 
 .profile-text:hover {
-    color: #e8003e;
+    color: #d43500;
 }
 
 .divider {
@@ -117,7 +117,7 @@ body {
 }
 
 .sidebar .menu-item:hover{
-    color: #e8003e;
+    color: #d42500;
 }
 
 .sidebar .menu-item img {
@@ -404,23 +404,29 @@ button:hover {
     margin: 10px 1.5% 15px 1.5%;
     padding: 0px;
     width: 100%;
-    height: auto;
-    border-radius: 45px;
+    height: fit-content;
+    border-radius: 20px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .cards-container div:hover{
     transform: scale(1.07);
 }
 
-.cards-container div img{
+.cards-container div a img{
     margin: 0px;
     padding: 0px;
     width: 100%;
     height: auto;
 }
-
+.cards-container a {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
 .line-filtro{
     width: 100%;
     height: auto;
@@ -472,7 +478,7 @@ button:hover {
     height: fit-content;
     margin: 0;
     padding: 0;
-    }
+}
 
 .correcaofundo-filmeplage{
     position: absolute;
@@ -560,5 +566,33 @@ button:hover {
     font-size: 21px;
     line-height: 1.5;
     color: #cfcfcf;
+}
+
+
+.filter-genres {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.genre-button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.genre-button:hover {
+    background-color: #555;
+}
+
+.movie-card {
+    background: #1a1a1a;
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
 }
 

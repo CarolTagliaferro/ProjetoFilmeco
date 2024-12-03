@@ -19,9 +19,9 @@
             <img src="/images/explorar.png" alt="Explorar" class="menu-icon">
             Explorar
         </a>
-        <a href="#" class="menu-item">
+        <a href="/aboutus" class="menu-item">
             <img src="/images/fav.png" alt="Favoritos" class="menu-icon">
-            Favoritos
+            Sobre nós
         </a>
         <a href="#" class="menu-item">
             <img src="/images/configuracao.png" alt="Configurações" class="menu-icon">
@@ -48,30 +48,26 @@
             <a href="#" class="profile-icon" aria-label="Perfil">
                 <img src="/images/profile.png" alt="Profile" class="profile-img">
             </a>
-            <a href="login.html" class="profile-text login-link">Login</a>
+            <a href="/login" class="profile-text login-link">Login</a>
             <span class="divider">/</span>
-            <a href="#" class="profile-text register-link">Inscrever-se</a>
+            <a href="/login" class="profile-text register-link">Inscrever-se</a>
         </div>
     </header>
 
     <!-- Conteudo -->
     <main class="main-content">
-         <div class="filmpage">
-             <div class="correcaofundo-filmeplage">
-            <img th:src="${fundo}">
-             </div>
+        <div class="filmpage">
+            <div class="correcaofundo-filmeplage">
+                <img th:src="${fundo}">
+            </div>
             <h2 th:text="${titulo}" class="titlefilme">Título</h2>
             <div class="catfilmpage">
-                <span>Categoria 1</span>
-                <span>Categoria 2</span>
-                <span>Categoria 3</span>
             </div>
             <div class="info">
                 <a th:href="${assistir}" class="play-button">
-                    <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 29.0215C0.0789933 32.0941 3.62501 33.9546 6.73191 32.4919L31.716 19.9094C33.0767 19.2231 34 17.9658 34 16.4923C34 15.0189 33.0767 13.7615 31.716 13.0753L6.73191 0.510697C3.62501 -0.952075 0.078812 0.890694 0 3.96338V29.0215Z" fill="white"/>
-                    </svg>
-                    <p>Ver agora</p>
+                <svg width="34" height="33" viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 29.0215C0.0789933 32.0941 3.62501 33.9546 6.73191 32.4919L31.716 19.9094C33.0767 19.2231 34 17.9658 34 16.4923C34 15.0189 33.0767 13.7615 31.716 13.0753L6.73191 0.510697C3.62501 -0.952075 0.078812 0.890694 0 3.96338V29.0215Z" fill="white"/>
+                </svg>
                 </a>
                 <span th:text="${duracao}">Duração: 120min</span>
                 <span th:text="${ano}">Ano: 2024</span>
@@ -89,7 +85,34 @@
         </div>
     </main>
 </div>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        const gender = /*[[${genero}]]*/ [];
+        /*]]>*/
+</script>
 
-<script src="script.js" defer></script>
+<script>
+    // Obtém os elementos com a classe 'catfilmpage'
+    const generoFilme = document.getElementsByClassName('catfilmpage');
+
+    if (generoFilme.length > 0) {
+        // Acessa o primeiro elemento dessa classe
+        const filmeGenero = generoFilme[0];
+
+        // Supondo que 'generos' seja uma lista de strings
+        // Exemplo de dados
+
+        // Adiciona as imagens ou textos usando os URLs diretamente
+        gender.forEach((genero) => {
+            // Cria um elemento <span>
+            const span = document.createElement('span');
+            span.textContent = genero; // Define o texto do span
+
+            // Adiciona o elemento <span> ao elemento filmeGenero
+            filmeGenero.appendChild(span);
+        });
+    }
+</script>
+<!--<script src="script.js" defer></script>-->
 </body>
 </html>

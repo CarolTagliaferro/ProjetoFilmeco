@@ -19,9 +19,9 @@
             <img src="/images/explorar.png" alt="Explorar" class="menu-icon">
             Explorar
         </a>
-        <a href="#" class="menu-item">
+        <a href="/aboutus" class="menu-item">
             <img src="/images/fav.png" alt="Favoritos" class="menu-icon">
-            Favoritos
+            Sobre nós
         </a>
         <a href="#" class="menu-item">
             <img src="/images/configuracao.png" alt="Configurações" class="menu-icon">
@@ -48,9 +48,9 @@
             <a href="#" class="profile-icon" aria-label="Perfil">
                 <img src="/images/profile.png" alt="Profile" class="profile-img">
             </a>
-            <a href="login.html" class="profile-text login-link">Login</a>
+            <a href="/login" class="profile-text login-link">Login</a>
             <span class="divider">/</span>
-            <a href="#" class="profile-text register-link">Inscrever-se</a>
+            <a href="/login" class="profile-text register-link">Inscrever-se</a>
         </div>
     </header>
 
@@ -133,6 +133,39 @@
        </div>
    </main>
 </div>
-<script src="static/script.js" defer></script>
+
+
+<!-- Script Caio para loopar div e imagens -->
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    const imageUrls = /*[[${images}]]*/ [];
+    const id = /*[[${id}]]*/ [];
+    /*]]>*/
+</script>
+
+<script>
+    const cardsContainer = document.getElementsByClassName('cards-container');
+    // const gallery = document.getElementById('gallery');
+    if (cardsContainer.length > 0) {
+        const cardContainer = cardsContainer[0];
+
+
+        // Adiciona as imagens usando os URLs diretamente
+        imageUrls.forEach((capaEndereco, index) => {
+            const img = document.createElement('img');
+            const galleryDiv = document.createElement('div');
+            const link = document.createElement('a');
+            link.href = `/filmpage?id=${id[index]}`;
+
+            img.src = capaEndereco; // Adiciona o URL diretamente ao atributo src
+            img.alt = `Image ${index + 1}`;
+            link.appendChild(img);
+            galleryDiv.appendChild(link);
+            cardContainer.appendChild(galleryDiv);
+
+        });
+    }
+</script>
+<script src="....script.js" defer></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
 
     <!-- SideMenu -->
     <div class="sidebar">
-        <a href="#" class="menu-item">
+        <a href="/home" class="menu-item">
             <img src="/images/Home.png" alt="Home" class="menu-icon">
             Home
         </a>
@@ -20,9 +20,9 @@
             <img src="/images/explorar.png" alt="Explorar" class="menu-icon">
             Explorar
         </a>
-        <a href="#" class="menu-item">
-            <img src="/images/fav.png" alt="Favoritos" class="menu-icon">
-            Favoritos
+        <a href="/aboutus" class="menu-item">
+            <img src="/images/fav.png" alt="About Us" class="menu-icon">
+            Sobre nós
         </a>
         <a href="#" class="menu-item">
             <img src="/images/configuracao.png" alt="Configurações" class="menu-icon">
@@ -49,9 +49,9 @@
             <a href="#" class="profile-icon" aria-label="Perfil">
                 <img src="/images/profile.png" alt="Profile" class="profile-img">
             </a>
-            <a href="login.html" class="profile-text login-link">Login</a>
+            <a href="/login" class="profile-text login-link">Login</a>
             <span class="divider">/</span>
-            <a href="#" class="profile-text register-link">Inscrever-se</a>
+            <a href="/login" class="profile-text register-link">Inscrever-se</a>
         </div>
     </header>
 
@@ -70,10 +70,6 @@
                     </svg>
                 </button>
                 <div class="carrossel-box">
-                  <!--  <div>
-                        <img th:src="${imageUrl1}" alt="Imagem">
-                    </div> -->
-
                 </div>
                 <button class="right-arrow">
                     <svg width="13" height="20" viewBox="0 0 13 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,20 +81,56 @@
     </main>
 </div>
 <!-- Não é a melhor forma mas o script pelo script.js não esta funcionando na minha maquina -->
+
+
+<!-- Script Caio para loopar div e imagens -->
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    const imageUrls = /*[[${images}]]*/ [];
+    const id = /*[[${id}]]*/ [];
+    const genders = /*[[${genders}]]*/ [];
+    const generoFilmes = /*[[${generoFilmes}]]*/ [];
+    /*]]>*/
+</script>
+
+<script>
+    const carrosselBoxes = document.getElementsByClassName('carrossel-box');
+   // const gallery = document.getElementById('gallery');
+    if (carrosselBoxes.length > 0) {
+        const carrosselBox = carrosselBoxes[0];
+
+
+        // Adiciona as imagens usando os URLs diretamente
+        imageUrls.forEach((capaEndereco, index) => {
+            const img = document.createElement('img');
+            const galleryDiv = document.createElement('div');
+            const link = document.createElement('a');
+            link.href = `/filmpage?id=${id[index]}`;
+
+            img.src = capaEndereco; // Adiciona o URL diretamente ao atributo src
+            img.alt = `Image ${index + 1}`;
+            link.appendChild(img);
+            galleryDiv.appendChild(link);
+            carrosselBox.appendChild(galleryDiv);
+
+        });
+    }
+</script>
+
 <script>
     <!-- Carrossel -->
-    const carrosselBox = document.querySelector('.carrossel-box');
+    const carrosselBox1 = document.querySelector('.carrossel-box');
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
 
     let currentIndex = 0; // Indice inicial
     const card = document.querySelectorAll('.carrossel-box div');
     const qntCards = 5; // Numero de cards que eu desejo
-    const cardWidth = carrosselBox.offsetWidth / qntCards; // calculo da largura de cada item
+    const cardWidth = carrosselBox1.offsetWidth / qntCards; // calculo da largura de cada item
 
     function updateCarrossel() {
         const translateX = -currentIndex * cardWidth; // função que vai mover meus cards baseado no index atual
-        carrosselBox.style.transform = `translateX(${translateX}px)`;
+        carrosselBox1.style.transform = `translateX(${translateX}px)`;
     }
 
     rightArrow.addEventListener('click', () => {
@@ -115,38 +147,6 @@
         }
     });
 
-</script>
-
-<!-- Script Caio para loopar div e imagens -->
-<script th:inline="javascript">
-    /*<![CDATA[*/
-    const imageUrls = /*[[${images}]]*/ [];
-    const id = /*[[${id}]]*/ [];
-    /*]]>*/
-</script>
-
-<script>
-    const carrosselBoxes = document.getElementsByClassName('carrossel-box');
-   // const gallery = document.getElementById('gallery');
-    if (carrosselBoxes.length > 0) {
-        const carrosselBox = carrosselBoxes[0];
-    }
-
-
-    // Adiciona as imagens usando os URLs diretamente
-    console.log(imageUrls)
-    imageUrls.forEach((capaEndereco, index) => {
-        const img = document.createElement('img');
-        const galleryDiv = document.createElement('div');
-        const link = document.createElement('a');
-        link.href = `/filmpage?id=${id[index]}`;
-
-        img.src = capaEndereco; // Adiciona o URL diretamente ao atributo src
-        img.alt = `Image ${index + 1}`;
-        link.appendChild(img);
-        galleryDiv.appendChild(link);
-        carrosselBox.appendChild(galleryDiv);
-    });
 </script>
 
 </body>

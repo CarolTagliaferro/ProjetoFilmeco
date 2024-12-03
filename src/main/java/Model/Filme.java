@@ -17,7 +17,7 @@ public class Filme {
     private String descricao;
     private int ano;
     private Date dataInsercao;
-    private ArrayList<String> generos;;
+    private ArrayList<String> generos;
     private String filmeEndereco;
     private String capaEndereco;
 

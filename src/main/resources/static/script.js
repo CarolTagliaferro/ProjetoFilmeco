@@ -15,10 +15,9 @@ document.getElementById('switch-to-login').addEventListener('click', function (e
 //Manda pra home
 
 document.getElementById('backhome-btn').addEventListener('click', function () {
-    window.location.href = '/index.html'; //eai kk tem q substituir pelo end certo
+    window.location.href = '/home';
 });
 
-//Manda pro login
 
 
 
