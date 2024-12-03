@@ -4,12 +4,11 @@
  > 2. [Filmeco](#Filmeco)
  > 3. [Tecnologias](#Tecnologias)
  > 4. [Status do projeto](#Status-do-projeto)
- > 5. [Desenvolvimento](#Desenvolvimento)
- > 6. [Design](#Design)
- > 7. [Demonstração](#Demonstração)
- > 8. [Acesso ao projeto](#Acesso-ao-projeto)
- > 9. [Dificuldades](#Dificuldades)
- > 10. [Autores](#Autores)
+ > 5. [Design](#Design)
+ > 6. [Demonstração](#Demonstração)
+ > 7. [Acesso ao projeto](#Acesso-ao-projeto)
+ > 8. [Dificuldades](#Dificuldades)
+ > 9. [Autores](#Autores)
 
 
 # Filmeco :vhs:  - Projeto final Programação Orientada a Objetos (POO)  <a name="Filmeco"></a>
@@ -32,7 +31,6 @@ O site propõe um lugar sem custos e sem contas, somente sua vontade de assistir
 - InteliJ
 - Visual Studio Code
 
-
   
 ## Status do projeto
   >  ### ✔️ Projeto pronto para entrega [03/12/24]
@@ -41,25 +39,12 @@ O site propõe um lugar sem custos e sem contas, somente sua vontade de assistir
   > 🆕🔜 Filtro de filmes por categoria  
   > 🆕 Pagina de filmes salvos, curtidos e "odiados"  
   > 🆕 Opção de continuar assistindo  
-
-## Desenvolvimento
-Para entender o projeto é necessário ter uma breve noção de como as tecnologias utilizadas funcionam:  
-Java: Linguagem de programação robusta e amplamente utilizada para desenvolvimento de aplicações, conhecida por sua portabilidade e segurança.  
-Spring Boot: Framework para Java que facilita a criação de aplicações web e microservices, oferecendo configuração simplificada e integração com outras ferramentas.  
-MVC (Model-View-Controller): Padrão de design que separa a aplicação em três camadas: Model (lógica de dados), View (interface do usuário) e Controller (controle do fluxo de dados).  
-Thymeleaf: Motor de templates usado em Java para criar páginas HTML dinâmicas de forma simples e integrada ao Spring.  
-HTML: Linguagem de marcação utilizada para estruturar o conteúdo de páginas web.  
-CSS: Linguagem de estilo utilizada para definir o design visual das páginas web, como cores, fontes e layouts.  
-JavaScript: Linguagem de programação usada para adicionar interatividade e dinamismo a páginas web.  
-XAMPP: Pacote de software que inclui Apache (servidor web), MySQL (banco de dados) e PHP/Perl, usado para desenvolvimento de aplicações web localmente.  
-MySQL: Sistema de gerenciamento de banco de dados relacional usado para armazenar e gerenciar dados de forma eficiente.  
-
-Com essas técnologias, o projeto cria uma aplicação web que puxa os filmes de um 
+ 
 ## Design
 Nascido da nostalgia  locadoras de filmes, do barulho de internet discada e da estática das antigas televisões de tubo, viemos de tempos mais simples. Dos amantes de cinema da velha guarda até os Gen Z. da atualidade, criamos um espaço para todos os povos que procuram uma biblioteca (que está sempre crescendo e quase nunca diminuindo).
 
-O design do projeto se baseia numa mistura da estética analógica dos anos de 1980 até 2000 com o minimalismo moderno, procurando invocar nos 
-usuários tanto da geração que viveu a época quanto a mais nova e criar  
+O design do projeto se baseia numa mistura da estética analógica dos anos de 1980 até 2000 com o minimalismo moderno, procurando trazer de volta a sensação descobrimento ao encontrar um filme novo e interessante
+no meio de uma grande biblioteca. Além disso criamos também um mascote do site para dar a sensação de companheirismo com o usuário, diferenciando-nos das grandes corporações que dominam o meio de streaming.
 🎨[Link do Figma do projeto](https://www.figma.com/design/Zby6c30kfou1ilKdp9E293/Filmeco?node-id=0-1&t=mlsa33K9yvtOPGI4-1)
 ## Demonstração
 
